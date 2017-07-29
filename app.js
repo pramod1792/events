@@ -1,6 +1,8 @@
 var app = require('express')();
 var request = require('request');
 
+var port = process.env.PORT || 5000;
+
 app.get('/events',function(req,res){
 
 request({
@@ -24,6 +26,6 @@ request({
 
 
 
-app.listen(5000,function(err){
+app.listen(port,function(err){
 console.log("Server listening on 5000");
 });

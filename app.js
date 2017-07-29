@@ -16,8 +16,8 @@ request({
     if (error) {
        res.status(500).send(error);
     }else{
-        console.log(JSON.stringify(response));
-        res.status(200).send(body.data);
+        //console.log(JSON.stringify(response));
+        res.status(200).send(JSON.parse(body).data);
         }
            //  console.log('Upload successful!  Server responded with:', body);
   })
